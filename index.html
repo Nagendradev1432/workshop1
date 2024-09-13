@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fom1">
+        <input type="search"  id="ip1" placeholder="search">
+        <button id="btn1">Submit</button>
+    </form>
+    <p id="p1"></p>
+    <script>
+
+        let form=document.getElementById("form1")
+        let ip1=document.getElementById("ip1")
+        let p1=document.getElementById("p1")
+        let btn1=document.getElementById("btn1")
+
+        let arr1=[{
+            Name:"iphone",
+            price:"2900/-"
+
+        },
+    	{
+            Name:"real me",
+            price:"39000/-"
+        } ,
+        {   
+            Name:"poco",
+            price:"30000/"
+
+        }]
+
+        btn1.addEventListener("click",(e)=>{
+            e.preventDefault()
+            arr1.forEach((a)=>{
+               if(a.Name==ip1.value){
+                p1.innerHTML=a.Name
+               
+               }
+
+            })
+        })
+            
+    
+
+          
+
+    </script>
+</body>
+</html>
